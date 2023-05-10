@@ -5,29 +5,29 @@
 fun main(args: Array<String>) {
 
 
-    val number: Long = 5236
-    println("Sum => ${sumFromOne(number)}")
 
-    //How to define a array.
-    val arr = intArrayOf(3,1,2,10,1)
-    val resultedArray = calcSumOfArray(arr)
-    for (i in resultedArray){
-        print("$i ")
+    val arr1 = arrayOf(0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1)
+    var temp = 0
+    var max = 0
+
+    for (i in arr1){
+     if (i == 0){
+         max = Math.max(max,temp)
+         temp=0
+     }else{
+         temp++
+     }
     }
 
-}
-
-fun calcSumOfArray(arr: IntArray): IntArray {
-  for (i in 1 until arr.size){
-        arr[i] = arr[i-1] + arr[i]
-  }
-    return arr
+    for (i in arr1){
+        print("$i ")
+    }
+    println("Answer => ${Math.max(max,temp)}")
 }
 
 
-fun sumFromOne(n: Long): Long{
-    return (1..n).reduce { sum, element -> sum + element }
-}
+
+
 
 
 
