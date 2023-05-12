@@ -1,5 +1,7 @@
 package arrays
 
+import kotlin.math.abs
+
 class BasicArrays {
 
     /**
@@ -22,6 +24,8 @@ class BasicArrays {
         //Method 2
         array2.forEach { it-> print("$it ") }
 
+        //Method 3
+        print(array3.joinToString())
 
     }
 
@@ -66,6 +70,47 @@ class BasicArrays {
         return Math.max(max,temp)
     }
 
+    fun findEvenNumbers(arr: IntArray): Int{
+        var eventNumer = 0
+        arr.forEach {
+            var acc = 0 ; var cur = it
+            while (cur != 0){
+                cur /= 10
+                acc++
+            }
+            if (acc%2 == 0) eventNumer++
+        }
+        return eventNumer
+    }
+
+
+    /**
+     * Square of the sorted Array
+     * @param [-4,-1,0,3,10]
+     * @return [0,1,9,16,100]
+     * Solution - 1
+     */
+    fun squareOfSortedArray(arr: IntArray): IntArray{
+        for (i in arr.indices) arr[i] *= arr[i]
+        return arr.sortedArray()
+    }
+
+    //Solution2 - The Faster way using Two Pointer
+    fun squareOfSortedArray1(arr: IntArray): IntArray{
+        var L = 0
+        var R = arr.size - 1
+        val nums = IntArray(arr.size)
+        for (i in nums.indices.reversed()) {
+            if (abs(arr[L]) >= abs(arr[R])) {
+                nums[i] = arr[L] * arr[L]
+                L++
+            } else {
+                nums[i] = arr[R] * arr[R]
+                R--
+            }
+        }
+        return nums
+    }
 
 
 }
