@@ -1,3 +1,4 @@
+import android.annotation.SuppressLint
 import arrays.BasicArrays
 import kotlin.math.sign
 
@@ -7,17 +8,17 @@ import kotlin.math.sign
 
 fun main(args: Array<String>) {
 
-    val arr = intArrayOf(1,0,2,3,0,4,5,0)
+    val arr = intArrayOf(0)
+    val arr1 = intArrayOf(1)
+    val m = 0
+    val n = 1
 
     val basicArrays = BasicArrays()
-//    print(basicArrays.findEvenNumbers(arr))
-//    print(basicArrays.findConsequenceOfArray(arr))
-//    print(basicArrays.calcSumOfArray(arr))
-//    print(basicArrays.sumFromOne(arr))
-//    val temp = basicArrays.squareOfSortedArray1(arr)
-//    temp.forEach {
-//        print("$it ")
-//    }
+
+//    basicArrays.duplicateZero1(arr)
+//      basicArrays.print2DArray()
+
+        basicArrays.mergeTwoArray(arr,m,arr1,n)
 
 
 
