@@ -15,8 +15,8 @@ class BasicArrays {
     /**
      * To Initilize the 2D Array in Kotlin - 2D
      */
-    private val array4 = arrayOf(intArrayOf(1,2,3), intArrayOf(4,5,6), intArrayOf(7,8,9))
-    private val array5 = Array(3) {IntArray(3)} // this will give the array 3X3
+    private val array4 = arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9))
+    private val array5 = Array(3) { IntArray(3) } // this will give the array 3X3
 
 
     /**
@@ -35,16 +35,32 @@ class BasicArrays {
         print(array3.joinToString())
     }
 
-    fun print2DArray(){
-        for (rows in array4){
+    fun print2DArray() {
+
+        for (rows in array4) {
             println(rows.contentToString())
         }
-        array5.forEach { row->
+
+        array4.forEach { row ->
             row.forEach { column ->
                 print("$column, ")
             }
             println()
         }
+
+        for (i in array4.indices) {
+            for (j in array4[i].indices) {
+                print("${array4[i][j]} ")
+            }
+            println()
+        }
+        var number = 0
+        for (i in array4.indices) {
+            for (j in array4[i].indices) {
+                number += array4[i][j]
+            }
+        }
+        print(number)
     }
 
 
@@ -163,7 +179,7 @@ class BasicArrays {
     }
 
     //Solution No - 2 - Fastest Way to
-    fun duplicateZero1(arr: IntArray){
+    fun duplicateZero1(arr: IntArray) {
         for (i in arr.indices.reversed()) { // This will reversed of array in kotlin
             if (arr[i] == 0) {
                 for (j in arr.size - 1 downTo i + 1) {
