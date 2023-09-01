@@ -1,4 +1,5 @@
 import arrays.BasicArrays
+import maps.BasicMaps
 
 /**
  * Kotlin programming in android studio
@@ -11,8 +12,12 @@ fun main(args: Array<String>) {
     val m = 0
     val n = 1
 
-    val basicArrays = BasicArrays()
-    basicArrays.print2DArray()
+
+    val mapperClass = BasicMaps()
+    mapperClass.printMap()
+
+//    val basicArrays = BasicArrays()
+//    basicArrays.print2DArray()
 
 //    basicArrays.duplicateZero1(arr)
 //      basicArrays.print2DArray()

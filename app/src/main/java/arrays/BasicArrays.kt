@@ -66,8 +66,8 @@ class BasicArrays {
 
     /**
      * calculate the sum of the array
-     * @param - [2,5,6,8]
-     * @return - [2,7,13,21]
+     * @param  [2,5,6,8]
+     * @return  [2,7,13,21]
      */
     fun calcSumOfArray(arr: IntArray): IntArray {
         for (i in 1 until arr.size) {
@@ -86,7 +86,7 @@ class BasicArrays {
 
     /**
      * find the Consequence in a binary array
-     * @param - [1,0,1,1,0,1,1,1,0]
+     * @param  [1,0,1,1,0,1,1,1,0]
      * @return  3
      */
     fun findConsequenceOfArray(arr: IntArray): Int {
