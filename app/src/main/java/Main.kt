@@ -1,5 +1,4 @@
-import arrays.BasicArrays
-import maps.BasicMaps
+import recursion.RecursionClass
 
 /**
  * Kotlin programming in android studio
@@ -11,24 +10,12 @@ fun main(args: Array<String>) {
     val arr1 = intArrayOf(1)
     val m = 0
     val n = 1
+    val recursive = RecursionClass.RECURSION_NUMBER
+    val recursiveAction = RecursionClass.dummyFunction()
 
 
-    val mapperClass = BasicMaps()
-    mapperClass.printMap()
-
-//    val basicArrays = BasicArrays()
-//    basicArrays.print2DArray()
-
-//    basicArrays.duplicateZero1(arr)
-//      basicArrays.print2DArray()
-
-//    val result = arr.map {
-//        it + 2
-//    }.toTypedArray()
-//
-//    result.forEach {
-//        print("$it ")
-//    }
+    val basicRecursion = RecursionClass()
+    println(basicRecursion.factorialNumber(7))
 
 }
 

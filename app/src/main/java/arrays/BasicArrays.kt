@@ -13,7 +13,7 @@ class BasicArrays {
 
 
     /**
-     * To Initilize the 2D Array in Kotlin - 2D
+     * To Initialize the 2D Array in Kotlin - 2D
      */
     private val array4 = arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9))
     private val array5 = Array(3) { IntArray(3) } // this will give the array 3X3
@@ -61,6 +61,13 @@ class BasicArrays {
             }
         }
         print(number)
+    }
+
+    /**
+     * find the last second digit in an array
+     */
+    fun findLastSecondDigit(arr: IntArray): Int{
+       return arr[arr.size-2]
     }
 
 
