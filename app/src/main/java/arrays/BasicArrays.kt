@@ -73,8 +73,8 @@ class BasicArrays {
 
     /**
      * calculate the sum of the array
-     * @param  [2,5,6,8]
-     * @return  [2,7,13,21]
+     * @param [2,5,6,8]
+     * @return [2,7,13,21]
      */
     fun calcSumOfArray(arr: IntArray): IntArray {
         for (i in 1 until arr.size) {
@@ -85,6 +85,7 @@ class BasicArrays {
 
     /**
      * Sum of the array
+     * @param arr an integer array
      * @return  integer value of the array sum.
      */
     fun sumFromOne(arr: IntArray): Int {
@@ -201,8 +202,11 @@ class BasicArrays {
 
     /**
      * merge two array with non-decreasing Order
-     * @param - a= [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
-     * @return - [1,2,2,3,5,6]
+     * @param nums1 [1,2,3,0,0,0]
+     * @param m 3
+     * @param nums2 [2,5,6]
+     * @param n 3
+     * @return [1,2,2,3,5,6]
      */
     fun mergeTwoArray(nums1: IntArray, m: Int, nums2: IntArray, n: Int) {
         var i = m - 1
